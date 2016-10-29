@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery-3.1.1.min.js"></script>
+<title>9</title>
+</head>
+<script>
+	$(document).ready(function(){
+		
+		for(i=0;i<10;i++) {
+			$( "#textBase" ).append( "<center><div style='padding:.5%;text-align:center;width:300px;background-color:red;margin:1%;border-radius:10px;box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);' class='div"+i+"'><h3 style='color:#fff;'>Ne Mutlu Türk’üm Diyene!</h3></div></center>" ); 	
+		}
+		
+	});
+
+	var effect1 = function() {
+		setInterval(function(){ 
+	        $("#textBase").fadeToggle(2000);
+		}, 1000);	
+	}
+	var effect2	 = function() {
+		setInterval(function(){ 
+	        $("#textBase").fadeOut(2000);
+		}, 1000);	
+	}
+	
+
+</script>
+<body>
+<button onclick="effect1()">Animasyon 1</button>
+<button onclick="effect2()">Animasyon 2</button>
+<div id="textBase" ></div>
+</body>
+</html>

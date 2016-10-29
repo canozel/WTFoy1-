@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+window.onload = function () {
+    var selectYear = document.getElementById("year");
+    var selectDay = document.getElementById("day");
+    
+    for(var i = 1; i <= 31; i++) {
+        var option = document.createElement('option');
+        option.text = option.value = i;
+        selectDay.add(option, 0);
+    }
+    
+    for(var i = 2016; i >= 1907; --i) {
+        var option = document.createElement('option');
+        option.text = option.value = i;
+        selectYear.add(option, 0);
+    }
+    
+	var timelapse = function(){
+			var year = document.getElementById("year").value;
+		    var day = document.getElementById("day").value;
+		    var month = document.getElementById("month").value;
+		    
+		    var timeNow = new Date();
+		    var selectTime = new Date(day + "-" + month + "-" + year);
+		    
+		    document.getElementById("kalan").innerHTML = new Date(timeNow - selectTime);
+	}
+};
+
+</script>
+<meta charset="UTF-8">
+<title>7</title>
+</head>
+<body>
+	
+	<select id="day">	
+	</select>
+	
+	<select id="month">
+	    <option value='1'>Ocak</option>
+	    <option value='2'>Şubat</option>
+	    <option value='3'>Mart</option>
+	    <option value='4'>Nisan</option>
+	    <option value='5'>Mayıs</option>
+	    <option value='6'>Haziran</option>
+	    <option value='7'>Temmuz</option>
+	    <option value='8'>Ağustos</option>
+	    <option value='9'>Eylül</option>
+	    <option value='10'>Ekim</option>
+	    <option value='11'>Kasım</option>
+	    <option value='12'>Aralık</option>
+    </select> 
+    
+	<select id="year">	
+	</select>
+	
+	<button onclick = "timelapse()">Günümüze uzaklığı</button>
+	
+	<p id="kalan">sdsd</p>
+</body>
+</html>

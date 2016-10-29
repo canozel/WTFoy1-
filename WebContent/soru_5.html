@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>5</title>
+</head>
+<script>
+	var setTitle = function() {
+		var title = document.getElementById("title").value;
+		document.title = title;
+	}
+</script>
+<body>
+	<input id="title" type="text" placeholder="Başlık gir..." />
+	<input onclick="setTitle()" type="button" value="Tamam" />
+</body>
+</html>

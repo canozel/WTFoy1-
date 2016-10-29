@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery-3.1.1.min.js"></script>
+<title>10</title>
+</head>
+<script>
+$(document).ready(function(){
+	
+	for(i=0;i<10;i++) {
+		$( "#textBase" ).append( "<center><div style='padding:.5%;text-align:center;width:300px;background-color:red;margin:1%;border-radius:10px;box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);' class='div"+i+"'><h3 style='color:#fff;'>Ne Mutlu Türk’üm Diyene!</h3></div></center>" ); 	
+	}
+	
+});
+	setInterval(function(){ 
+
+	    	$(".div0").fadeToggle(1000);
+	    	$(".div1").fadeToggle(2000);
+	    	$(".div2").fadeToggle(3000);
+	    	$(".div3").fadeToggle(4000);
+	    	$(".div4").fadeToggle(5000);
+	    	$(".div5").fadeToggle(6000);
+	    	$(".div6").fadeToggle(7000);
+	    	$(".div7").fadeToggle(8000);
+	    	$(".div8").fadeToggle(9000);
+	    	$(".div9").fadeToggle(10000);
+	    	$(".div10").fadeToggle(11000);
+		
+	}, 1000);	
+
+
+</script>
+</head>
+<body>
+<div id="textBase" ></div>
+</body>
+</html>
